@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c06bdd3d-8914-4884-933d-0bb13ab26a22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/student-system/lib/druid-1.2.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student-system/lib/mysql-connector-j-8.0.32.jar" afterDir="false" />
+    <list default="true" id="c06bdd3d-8914-4884-933d-0bb13ab26a22" name="Changes" comment="配置数据库相关的文件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-system/src/com/itheima/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-system/src/com/itheima/login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,23 +29,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-1.8",
-    "last_opened_file_path": "C:/Users/admin/IdeaProjects/student_test01/student-system/lib",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/IdeaProjects/student_test01/student-system/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\admin\IdeaProjects\student_test01\student-system\lib" />
@@ -56,7 +55,20 @@
       <recent name="com.itheima" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.com.itheima.login">
+    <configuration name="com.itheima.login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.login" />
+      <module name="student-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="login" />
       <module name="student-system" />
@@ -66,6 +78,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.itheima.login" />
         <item itemvalue="Application.login" />
       </list>
     </recent_temporary>
@@ -82,6 +95,11 @@
       <workItem from="1690769326063" duration="4519000" />
       <workItem from="1690774027712" duration="48000" />
       <workItem from="1690774096266" duration="205000" />
+      <workItem from="1690774340550" duration="387000" />
+      <workItem from="1690774732256" duration="3000" />
+      <workItem from="1690774776481" duration="428000" />
+      <workItem from="1690775247907" duration="507000" />
+      <workItem from="1690775838391" duration="651000" />
     </task>
     <task id="LOCAL-00001" summary="开始构建学生管理系统">
       <created>1690769413078</created>
@@ -125,7 +143,21 @@
       <option name="project" value="LOCAL" />
       <updated>1690773710239</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="配置数据库相关的文件">
+      <created>1690774451223</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690774451223</updated>
+    </task>
+    <task id="LOCAL-00008" summary="修改Druid配置的数据库名">
+      <created>1690774578486</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1690774578486</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +168,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -149,6 +187,8 @@
     <MESSAGE value="菜单栏的功能初始化" />
     <MESSAGE value="完善学生管理系统的四个功能" />
     <MESSAGE value="创建学生类" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建学生类" />
+    <MESSAGE value="配置数据库相关的文件" />
+    <MESSAGE value="修改Druid配置的数据库名" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改Druid配置的数据库名" />
   </component>
 </project>
