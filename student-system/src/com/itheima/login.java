@@ -164,12 +164,21 @@ public class login {
 
 
     //查询学生
-    public static void queryStudent(){
+    public static void queryStudent() throws Exception {
         System.out.println("查询学生");
+        //获取当前数据库集合
+        List<student> list = getList();
+        System.out.println("学号"+"\t"+"姓名"+"\t"+"\t"+"年龄"+"\t"+"家庭住址");
+        for (int i = 0; i < list.size(); i++) {
+            //获取学生对象
+            student stu = list.get(i);
+            System.out.println(stu.getId()+"\t\t"+stu.getName()+"\t\t"+stu.getAge()+"\t\t"+stu.getAddress());
+        }
+
     }
 
 
-    //生成一个与mysql数据库连接的方法
+    //连接数据库，获取当前数据库的集合
     public static List<student> getList() throws Exception {
 
         //建立数据库连接
