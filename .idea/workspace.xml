@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c06bdd3d-8914-4884-933d-0bb13ab26a22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/student-system/src/com/itheima/test/sutdent_login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-system/src/com/itheima/test/sutdent_login.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-system/src/com/itheima/test/sutdent_login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +134,13 @@
       <workItem from="1690777226253" duration="1171000" />
       <workItem from="1690778482242" duration="2665000" />
       <workItem from="1690784539955" duration="848000" />
-      <workItem from="1690785432656" duration="3817000" />
+      <workItem from="1690785432656" duration="4443000" />
+      <workItem from="1690790085119" duration="1497000" />
+      <workItem from="1690791712588" duration="35000" />
+      <workItem from="1690791823918" duration="343000" />
+      <workItem from="1690792208932" duration="414000" />
+      <workItem from="1690792654840" duration="406000" />
+      <workItem from="1690793111157" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="开始构建学生管理系统">
       <created>1690769413078</created>
@@ -241,7 +247,21 @@
       <option name="project" value="LOCAL" />
       <updated>1690788176918</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="完善了学生管理系统的3个功能的初始化">
+      <created>1690789308966</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1690789308966</updated>
+    </task>
+    <task id="LOCAL-00017" summary="生成用户类">
+      <created>1690789515293</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1690789515293</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +299,8 @@
     <MESSAGE value="增加了判断学生信息是否存在" />
     <MESSAGE value="完成了学生管理系统的全部功能" />
     <MESSAGE value="调整包下面类的结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="调整包下面类的结构" />
+    <MESSAGE value="完善了学生管理系统的3个功能的初始化" />
+    <MESSAGE value="生成用户类" />
+    <option name="LAST_COMMIT_MESSAGE" value="生成用户类" />
   </component>
 </project>
