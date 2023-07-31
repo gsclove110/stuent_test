@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c06bdd3d-8914-4884-933d-0bb13ab26a22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/student-system/src/com/itheima/polo/student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student-system/lib/druid-1.2.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student-system/lib/mysql-connector-j-8.0.32.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student-system/src/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-system/src/com/itheima/login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-1.8",
+    "last_opened_file_path": "C:/Users/admin/IdeaProjects/student_test01/student-system/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,6 +48,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\IdeaProjects\student_test01\student-system\lib" />
+      <recent name="C:\Users\admin\IdeaProjects\student_test01\lib" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.itheima" />
     </key>
@@ -74,7 +79,9 @@
       <option name="presentableId" value="Default" />
       <updated>1690769122337</updated>
       <workItem from="1690769123380" duration="198000" />
-      <workItem from="1690769326063" duration="4258000" />
+      <workItem from="1690769326063" duration="4519000" />
+      <workItem from="1690774027712" duration="48000" />
+      <workItem from="1690774096266" duration="205000" />
     </task>
     <task id="LOCAL-00001" summary="开始构建学生管理系统">
       <created>1690769413078</created>
@@ -111,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690772512296</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="创建学生类">
+      <created>1690773710239</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690773710239</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +148,7 @@
     <MESSAGE value="初始化菜单" />
     <MESSAGE value="菜单栏的功能初始化" />
     <MESSAGE value="完善学生管理系统的四个功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善学生管理系统的四个功能" />
+    <MESSAGE value="创建学生类" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建学生类" />
   </component>
 </project>
