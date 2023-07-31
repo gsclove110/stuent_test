@@ -20,16 +20,16 @@ public class login {
             //判断用户的选择使用switch
             switch (choose){
                 case "1" :
-                    System.out.println("添加学生");
+                    addStudent();
                     break;
                 case "2" :
-                    System.out.println("删除学生");
+                    deleteStudent();
                     break;
                 case "3" :
-                    System.out.println("修改学生");
+                   updateStudent();
                     break;
                 case "4" :
-                    System.out.println("查询学生");
+                    queryStudent();
                     break;
                 case "5" :
                     System.out.println("退出");
@@ -40,5 +40,33 @@ public class login {
             }
         }
 
+    }
+
+
+    //完成四个功能
+
+    //添加学生
+    public static void addStudent(){
+        System.out.println("添加学生");
+    }
+
+
+    //删除学生
+    public static void deleteStudent(){
+        System.out.println("删除学生");
+    }
+
+
+
+    //修改学生
+    public static void updateStudent(){
+        System.out.println("修改学生");
+    }
+
+
+
+    //查询学生
+    public static void queryStudent(){
+        System.out.println("查询学生");
     }
 }

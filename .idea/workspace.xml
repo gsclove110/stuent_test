@@ -60,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690769122337</updated>
       <workItem from="1690769123380" duration="198000" />
-      <workItem from="1690769326063" duration="2309000" />
+      <workItem from="1690769326063" duration="3031000" />
     </task>
     <task id="LOCAL-00001" summary="开始构建学生管理系统">
       <created>1690769413078</created>
@@ -83,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690771189244</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="菜单栏的功能初始化">
+      <created>1690771899020</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690771899020</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +111,7 @@
     <MESSAGE value="开始构建学生管理系统" />
     <MESSAGE value="删除了idea自带的开始语句" />
     <MESSAGE value="初始化菜单" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始化菜单" />
+    <MESSAGE value="菜单栏的功能初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="菜单栏的功能初始化" />
   </component>
 </project>
