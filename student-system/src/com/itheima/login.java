@@ -207,8 +207,77 @@ public class login {
 
 
     //修改学生
-    public static void updateStudent(){
+    public static void updateStudent() throws Exception {
         System.out.println("修改学生");
+
+        //键盘输入需要修改的学生id
+        Scanner sc = new Scanner(System.in);
+        //接收输入的学生id
+        System.out.println("请输入需要修改的学生id");
+        String id = sc.next();
+
+        //获取当前数据库集合
+        List<student> list = getList();
+
+        //判断当前集合中是否存在学生id
+        int index = getIndex(list, id);
+
+        //判断索引是否存在
+        if (index>=0){
+            //索引存在
+
+            //输入需要修改的学生名字
+            System.out.println("请输入需要修改的名字");
+            String name = sc.next();
+
+            //输入需要修改的年龄
+            System.out.println("请输入需要修改的年龄");
+            int age = sc.nextInt();
+
+            //请输入需要修改的家庭住址
+            System.out.println("请输入需要修改的家庭住址");
+            String address = sc.next();
+
+
+
+            //1.建立数据库连接
+            Properties prop = new Properties();
+            prop.load(new FileInputStream("C:\\Users\\admin\\IdeaProjects\\student_test01\\student-system\\Druid.properties"));
+            DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
+            Connection conn = dataSource.getConnection();
+
+            //2.sql语句
+            String sql = "update student set name = ?,age = ?,address = ? where number = ?";
+
+            //3.创建执行sql语句对象
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+
+            //4.设置参数
+            pstmt.setString(1,name);
+            pstmt.setInt(2,age);
+            pstmt.setString(3,address);
+            pstmt.setString(4,id);
+
+            //5.执行sql
+            int i = pstmt.executeUpdate();
+
+            //6.处理结果
+            if (i>0){
+                System.out.println("修改成功");
+            }else {
+                System.out.println("修改失败");
+            }
+
+            //7.关闭资源
+            pstmt.close();
+            conn.close();
+
+
+        }else {
+            System.out.println("需要修改的学生id不存在");
+            return;
+        }
+
     }
 
 
