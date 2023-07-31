@@ -4,7 +4,6 @@ import com.alibaba.druid.pool.DruidDataSourceFactory;
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -63,11 +62,12 @@ public class sutdent_login {
         //键盘输入用户名
         Scanner sc = new Scanner(System.in);
 
-
+        //验证用户名
+        String username;
         while (true) {
             //接收用户名
             System.out.println("请输入需要注册的用户名");
-            String username = sc.next();
+            username = sc.next();
             //验证用户名的格式是否满足条件,生成一个方法
             boolean flag = checkUsername(username);
 
@@ -91,12 +91,13 @@ public class sutdent_login {
             }
         }
 
-        //用户名可以正常使用
+        //2.验证密码
 
+        String password;
         while (true) {
             //输入密码
             System.out.println("请输入密码");
-            String password = sc.next();
+           password = sc.next();
 
             System.out.println("请再次输入密码");
             String againpassword = sc.next();
@@ -110,6 +111,123 @@ public class sutdent_login {
                 System.out.println("密码输入不一致，请重新输入");
                 continue;
             }
+        }
+
+
+        //3.验证身份证号码
+        String personID;
+        while (true) {
+
+            System.out.println("请输入身份证号码");
+            personID = sc.next();
+
+            boolean flag = checkPersonID(personID);
+
+            if (flag){
+                //身份证号码正确
+                break;
+            }else {
+                System.out.println("身份证号码不符合要求");
+                continue;
+            }
+        }
+
+        //4.验证手机号码
+        String phoneNumber;
+        while (true) {
+            System.out.println("请输入手机号码");
+           phoneNumber = sc.next();
+
+            //生成一个方法验证手机号码是否满足要求
+            boolean flag = checkPhoneNumber(phoneNumber);
+
+            if (flag){
+                //手机号码满足要求
+                break;
+
+            }else {
+                System.out.println("手机号码不符合要求，请重新输入");
+                continue;
+            }
+        }
+
+        //向数据库中存储注册的信息
+
+        //1.建立数据库连接
+        Properties prop = new Properties();
+        prop.load(new FileInputStream("C:\\Users\\admin\\IdeaProjects\\student_test01\\student-system\\Druid.properties"));
+        DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
+        Connection conn = dataSource.getConnection();
+
+        //2.sql语句
+        String sql = "insert into user (username, password, personID, phoneNumber) value (?,?,?,?)";
+
+        //3.创建执行sql语句的对象
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+
+        //4.设置参数
+        pstmt.setString(1,username);
+        pstmt.setString(2,password);
+        pstmt.setString(3,personID);
+        pstmt.setString(4,phoneNumber);
+
+        //5.执行sql
+        int count = pstmt.executeUpdate();
+
+        //6.处理结果
+        if (count>0){
+            System.out.println("注册成功");
+        }else {
+            System.out.println("注册失败");
+        }
+
+        //7.关闭资源
+        pstmt.close();
+        conn.close();
+
+
+    }
+
+    //验证手机号码是否满足要求
+    private static boolean checkPhoneNumber(String phoneNumber) {
+        //使用正则表达式验证
+        String regex = "[1-9]\\d{10}";
+
+        boolean flag = phoneNumber.matches(regex);
+        return flag;
+    }
+
+    //验证身份证号是否满足要求
+    private static boolean checkPersonID(String personID) {
+        //1.身份证长度为18位
+        int len = personID.length();
+        if (len!=18){
+            return false;
+        }
+
+        //2.不能以0开头
+      if (personID.startsWith("0")){
+          return false;
+      }
+
+      //3.前17位必须是数字
+        for (int i = 0; i < personID.length()-1; i++) {
+            //得到每个字符
+            char c = personID.charAt(i);
+
+            if (!(c>='0'&&c<='9')){
+                return false;
+            }
+        }
+
+        //4.最后一位可以是数字，也可以是大写X或者x
+
+        //最后一位字符
+        char c = personID.charAt(personID.length() - 1);
+        if ((c>='0'&&c<='9')||(c=='x')||(c=='X')){
+            return true;
+        }else {
+            return false;
         }
 
 
