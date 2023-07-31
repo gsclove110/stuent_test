@@ -1,6 +1,5 @@
-package com.itheima;
+package com.itheima.test;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import com.itheima.polo.student;
 import javax.sql.DataSource;
 import java.io.FileInputStream;
 import java.sql.Connection;

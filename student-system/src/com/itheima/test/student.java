@@ -1,4 +1,4 @@
-package com.itheima.polo;
+package com.itheima.test;
 
 public class student {
     private String id;
