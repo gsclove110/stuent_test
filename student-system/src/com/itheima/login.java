@@ -59,13 +59,93 @@ public class login {
     //添加学生
     public static void addStudent() throws Exception {
         System.out.println("添加学生");
+        //获得当前数据库的集合
         List<student> list = getList();
-        System.out.println(list);
+
+        //键盘输入学生的id
+        Scanner sc = new Scanner(System.in);
+
+        String number =null;
+        while (true) {
+            //接收学生的id
+            System.out.println("请输入需要添加的学生id");
+             number = sc.next();
+
+            //判断学生的id是否在集合中是否存在
+
+            int index = getIndex(list,number);
+
+            if (index>=0){
+                //id在集合中存在
+                System.out.println("输入的id已存在，请重新输入");
+                continue;
+            }else {
+                //id不存在
+                break;
+            }
+        }
+
+        System.out.println("请输入学生的姓名");
+        String name = sc.next();
+
+        System.out.println("请输入学生的年龄");
+        int age = sc.nextInt();
+
+        System.out.println("请输入学生的家庭住址");
+        String address = sc.next();
+
+        //把新输入的学生信息添加到数据库当中
+
+        //1.建立数据库连接
+        Properties prop = new Properties();
+        prop.load(new FileInputStream("C:\\Users\\admin\\IdeaProjects\\student_test01\\student-system\\Druid.properties"));
+        DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
+        Connection conn = dataSource.getConnection();
+
+        //2.sql语句
+        String sql = "insert into student (number, name, age, address) VALUES (?,?,?,?)";
+
+        //3.创建执行sql语句的对象
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+
+        //4.设置参数
+        pstmt.setString(1,number);
+        pstmt.setString(2,name);
+        pstmt.setInt(3,age);
+        pstmt.setString(4,address);
+
+        //5.执行sql
+        int count = pstmt.executeUpdate();
+
+        //6.处理结果
+        if (count>0){
+            System.out.println("添加成功");
+        }else {
+            System.out.println("添加失败");
+        }
+
+        //7.关闭资源
+        pstmt.close();
+        conn.close();
+
+    }
 
 
-        //键盘录入学生的id
+    //判断学生id是否存在集合当中
+    private static int getIndex(List<student> list, String number) {
+        //判断number是否在list集合中存在，存在返回索引，不存在返回-1
+        for (int i = 0; i < list.size(); i++) {
+            //得到集合中的学生对象
+            student stu = list.get(i);
+            //得到学生的id
+            String id = stu.getId();
 
+            if (number.equals(id)){
+                return i;
+            }
 
+        }
+        return -1;
     }
 
 
