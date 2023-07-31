@@ -150,8 +150,58 @@ public class login {
 
 
     //删除学生
-    public static void deleteStudent(){
+    public static void deleteStudent() throws Exception {
         System.out.println("删除学生");
+        //获取当前数据库集合
+        List<student> list = getList();
+
+        //键盘输入需要删除的学生id
+        System.out.println("请输入需要删除的学生id");
+
+        //scanner接收键盘输入的数据
+        Scanner sc = new Scanner(System.in);
+        //接收输入的id
+        String id = sc.next();
+        //获取学生id在集合中的索引
+        int index = getIndex(list, id);
+
+        //判断索引是否存在
+        if (index>=0){
+            //表示索引存在,进行删除操作
+
+            //1.建立数据库连接
+            Properties prop = new Properties();
+            prop.load(new FileInputStream("C:\\Users\\admin\\IdeaProjects\\student_test01\\student-system\\Druid.properties"));
+            DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
+            Connection conn = dataSource.getConnection();
+
+            //2.sql语句
+            String sql = "delete from student where number=?";
+
+            //3.创建执行sql语句的对象
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+
+            //4.设置参数
+            pstmt.setString(1,id);
+
+            //5.执行sql语句
+            int count = pstmt.executeUpdate();
+
+            //6.处理结果
+            System.out.println("删除成功");
+
+            //7.关闭资源
+            pstmt.close();
+            conn.close();
+
+
+        }else {
+            System.out.println("id不存在，删除失败");
+            return;
+        }
+
+
+
     }
 
 
