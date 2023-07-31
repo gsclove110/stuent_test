@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c06bdd3d-8914-4884-933d-0bb13ab26a22" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/student-system/src/com/itheima/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-system/src/com/itheima/test/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student-system/src/com/itheima/polo/student.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-system/src/com/itheima/test/student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student-system/src/com/itheima/test/sutdent_login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +52,11 @@
       <recent name="C:\Users\admin\IdeaProjects\student_test01\lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.itheima.test" />
       <recent name="com.itheima" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.itheima.test.login">
+  <component name="RunManager" selected="Application.sutdent_login">
     <configuration name="com.itheima.login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itheima.login" />
       <module name="student-system" />
@@ -89,8 +90,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="sutdent_login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.test.sutdent_login" />
+      <module name="student-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.sutdent_login" />
         <item itemvalue="Application.com.itheima.test.login" />
         <item itemvalue="Application.com.itheima.login" />
         <item itemvalue="Application.login" />
@@ -119,7 +134,7 @@
       <workItem from="1690777226253" duration="1171000" />
       <workItem from="1690778482242" duration="2665000" />
       <workItem from="1690784539955" duration="848000" />
-      <workItem from="1690785432656" duration="2647000" />
+      <workItem from="1690785432656" duration="3817000" />
     </task>
     <task id="LOCAL-00001" summary="开始构建学生管理系统">
       <created>1690769413078</created>
@@ -219,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690787271370</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="调整包下面类的结构">
+      <created>1690788176918</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1690788176918</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +278,7 @@
     <MESSAGE value="完成了查询学生功能" />
     <MESSAGE value="增加了判断学生信息是否存在" />
     <MESSAGE value="完成了学生管理系统的全部功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了学生管理系统的全部功能" />
+    <MESSAGE value="调整包下面类的结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整包下面类的结构" />
   </component>
 </project>
