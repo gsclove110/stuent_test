@@ -62,13 +62,73 @@ public class sutdent_login {
 
         //键盘输入用户名
         Scanner sc = new Scanner(System.in);
-        //接收用户名
-        String username = sc.next();
-        //验证用户名的格式是否满足条件,生成一个方法
-        boolean flag = checkUsername(username);
 
 
+        while (true) {
+            //接收用户名
+            System.out.println("请输入需要注册的用户名");
+            String username = sc.next();
+            //验证用户名的格式是否满足条件,生成一个方法
+            boolean flag = checkUsername(username);
 
+            if (!flag){
+                //用户名格式不正确
+                System.out.println("用户名格式不正确，请重新输入");
+                continue;
+            }
+
+            //到此用户名格式正确
+
+            //判断用户名是否已经存在
+
+            boolean flag1 = contains(list,username);
+
+            if (flag1){
+                System.out.println("用户名已经存在");
+            }else {
+                //用户名不存在
+                break;
+            }
+        }
+
+        //用户名可以正常使用
+
+        while (true) {
+            //输入密码
+            System.out.println("请输入密码");
+            String password = sc.next();
+
+            System.out.println("请再次输入密码");
+            String againpassword = sc.next();
+
+            //判断两次密码是否一致
+            if (password.equals(againpassword)){
+                //两次密码输入一致
+                break;
+            }else {
+                //两次密码输入不一致
+                System.out.println("密码输入不一致，请重新输入");
+                continue;
+            }
+        }
+
+
+    }
+
+    //判断用户名在集合中是否存在
+    private static boolean contains(List<User> list, String username) {
+        //遍历集合
+        for (int i = 0; i < list.size(); i++) {
+            //获得集合中的用户对象
+            User user = list.get(i);
+
+            //判断用户名是否在集合中存在
+            if (username.equals(user.getUsername())){
+                return true;
+            }
+
+        }
+        return false;
     }
 
     //验证用户名的格式是否正确

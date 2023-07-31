@@ -141,6 +141,11 @@
       <workItem from="1690792208932" duration="414000" />
       <workItem from="1690792654840" duration="406000" />
       <workItem from="1690793111157" duration="32000" />
+      <workItem from="1690793173104" duration="160000" />
+      <workItem from="1690793512044" duration="13000" />
+      <workItem from="1690793544882" duration="184000" />
+      <workItem from="1690793796239" duration="538000" />
+      <workItem from="1690794368794" duration="434000" />
     </task>
     <task id="LOCAL-00001" summary="开始构建学生管理系统">
       <created>1690769413078</created>
@@ -261,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690789515293</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="完成了用户名格式的校验">
+      <created>1690793239955</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1690793239955</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +313,7 @@
     <MESSAGE value="调整包下面类的结构" />
     <MESSAGE value="完善了学生管理系统的3个功能的初始化" />
     <MESSAGE value="生成用户类" />
-    <option name="LAST_COMMIT_MESSAGE" value="生成用户类" />
+    <MESSAGE value="完成了用户名格式的校验" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了用户名格式的校验" />
   </component>
 </project>
