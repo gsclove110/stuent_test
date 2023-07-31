@@ -168,6 +168,10 @@ public class login {
         System.out.println("查询学生");
         //获取当前数据库集合
         List<student> list = getList();
+        if (list.size()==0){
+            System.out.println("当前无学生信息，请添加后在查询");
+            return;
+        }
         System.out.println("学号"+"\t"+"姓名"+"\t"+"\t"+"年龄"+"\t"+"家庭住址");
         for (int i = 0; i < list.size(); i++) {
             //获取学生对象

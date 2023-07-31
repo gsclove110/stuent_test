@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c06bdd3d-8914-4884-933d-0bb13ab26a22" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student-system/src/com/itheima/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-system/src/com/itheima/login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +102,7 @@
       <workItem from="1690776937695" duration="28000" />
       <workItem from="1690777032240" duration="165000" />
       <workItem from="1690777226253" duration="1171000" />
-      <workItem from="1690778482242" duration="2486000" />
+      <workItem from="1690778482242" duration="2665000" />
     </task>
     <task id="LOCAL-00001" summary="开始构建学生管理系统">
       <created>1690769413078</created>
@@ -175,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690783365644</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完成了查询学生功能">
+      <created>1690784350794</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690784350794</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +215,7 @@
     <MESSAGE value="修改Druid配置的数据库名" />
     <MESSAGE value="完成项目与数据库的连接，并返回数据库的结果" />
     <MESSAGE value="完成了添加学生功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了添加学生功能" />
+    <MESSAGE value="完成了查询学生功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了查询学生功能" />
   </component>
 </project>
