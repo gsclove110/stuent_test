@@ -102,6 +102,10 @@ public class sutdent_login {
             //登入成功
             System.out.println("登入成功");
 
+            //转接到学生界面
+            login.maneger_student();
+
+
         } else {
             //登入失败
             System.out.println("登入失败");
@@ -419,9 +423,100 @@ public class sutdent_login {
     }
 
     //3.忘记密码
-    public static void forgetPassword(){
+    public static void forgetPassword() throws Exception {
         System.out.println("忘记密码");
+        List<User> list = getList();
+
+        //键盘录入用户名
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入用户名");
+        String username = sc.next();
+        
+        //判断当前用户名是否存在
+
+        boolean flag = contains(list, username);
+        if (!flag){
+            System.out.println("用户名未注册");
+            return;
+        }
+        
+        //键盘输入身份证号码
+        System.out.println("请输入身份证号码");
+        String personID = sc.next();
+        
+        //键盘输入手机号码
+        System.out.println("请输入手机号码");
+        String phoneNumber = sc.next();
+        
+        //将当前用户封装成用户对象
+        User userinfo = new User();
+        userinfo.setUsername(username);
+        userinfo.setPersonID(personID);
+        userinfo.setPhoneNumber(phoneNumber);
+        
+        //生成一个方法，判断用户的身份证号码和手机号码是否一致
+        boolean flag1 = checkinfo(list,userinfo);
+        if (flag1){
+            //身份证和手机号码一致
+            System.out.println("请输入需要修改的密码");
+            String revisePassword = sc.next();
+
+            //1.建立数据库连接
+            Properties prop = new Properties();
+            prop.load(new FileInputStream("C:\\Users\\admin\\IdeaProjects\\student_test01\\student-system\\Druid.properties"));
+            DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
+            Connection conn = dataSource.getConnection();
+
+            //2.sql语句
+            String sql = "update user set password = ? where username = ?";
+
+            //3.创建执行sql语句的对象
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+
+            //4.设置参数
+            pstmt.setString(1,revisePassword);
+            pstmt.setString(2,username);
+
+            //5.执行sql
+            int count = pstmt.executeUpdate();
+
+            //6.处理结果
+            if (count>0){
+                System.out.println("修改成功");
+            }else {
+                System.out.println("修改失败");
+            }
+
+            //7.关闭资源
+            pstmt.close();
+            conn.close();
+
+
+
+
+        }else {
+            System.out.println("账户信息不匹配，修改失败");
+        }
+
+
     }
+    
+    //判断用户身份证号码和手机号码是否一致的方法
+
+    private static boolean checkinfo(List<User> list, User userinfo) {
+        //遍历集合
+        for (int i = 0; i < list.size(); i++) {
+            //得到每个当前的用户对象
+            User user = list.get(i);
+            if (user.getPersonID().equals(userinfo.getPersonID())&&user.getPhoneNumber().equals(userinfo.getPhoneNumber())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //判断身份证和手机号码是否存在
+   
 
     //4.生成一个获取当前数据库集合的方法
     public static List<User> getList() throws Exception {

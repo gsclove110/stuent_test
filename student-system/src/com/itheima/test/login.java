@@ -11,7 +11,7 @@ import java.util.Properties;
 import java.util.Scanner;
 
 public class login {
-    public static void main(String[] args) throws Exception {
+    public static void maneger_student() throws Exception {
         while (true) {
             //构建登入界面
             System.out.println("----------------------欢迎来到黑马学生管理系统---------------------------");
