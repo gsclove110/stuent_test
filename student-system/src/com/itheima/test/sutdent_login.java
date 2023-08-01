@@ -1,16 +1,11 @@
 package com.itheima.test;
-
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-
 import javax.sql.DataSource;
 import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
-import java.util.Scanner;
+import java.util.*;
 
 public class sutdent_login {
     public static void main(String[] args) throws Exception {
@@ -49,8 +44,140 @@ public class sutdent_login {
     //完善学生管理系统的3个功能
 
     //1.登入功能
-    public static void login(){
+    public static void login() throws Exception {
         System.out.println("登入");
+        List<User> list = getList();
+
+        for (int i = 0; i < 3; i++) {
+
+
+
+        //1.键盘录入用户名
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入用户名");
+        String username = sc.next();
+
+        //判断用户名是否存在
+        boolean flag = contains(list, username);
+        if (!flag) {
+            //用户名不存在
+            System.out.println("用户名未注册");
+            return;
+        }
+
+
+        //2.键盘录入密码
+        System.out.println("请输入密码");
+        String password = sc.next();
+
+        //3.键盘录入验证码
+        while (true) {
+            String rightcode = getCode();
+            System.out.println("验证码为：" + rightcode);
+            System.out.println("请输入验证码");
+            //接收验证码
+            String code = sc.next();
+
+            //比较验证码是否正确
+            if (rightcode.equalsIgnoreCase(code)) {
+                //验证码正确
+                break;
+            } else {
+                System.out.println("验证码输入错误，请重新输入");
+                continue;
+            }
+        }
+
+        //把用户名和密码封装成用户对象
+
+        //创建用户对象
+        User userinfo = new User();
+        userinfo.setUsername(username);
+        userinfo.setPassword(password);
+
+
+        //生成一个方法，判断用户是否在集合中存在
+        boolean flag1 = checkUserinfo(list, userinfo);
+        if (flag1) {
+            //登入成功
+            System.out.println("登入成功");
+
+        } else {
+            //登入失败
+            System.out.println("登入失败");
+            if (i==2){
+                System.out.println("当前用户已被锁定");
+                return;
+            }else {
+                System.out.println("还剩余："+(2-i)+"次机会");
+            }
+        }
+    }
+
+
+
+
+    }
+
+    //判断登入的用户是否存在
+    private static boolean checkUserinfo(List<User> list, User userinfo) {
+        //遍历集合
+        for (int i = 0; i < list.size(); i++) {
+            //得到用户对象
+            User user = list.get(i);
+
+            if (user.getUsername().equals(userinfo.getUsername())&&user.getPassword().equals(userinfo.getPassword())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //生成一个验证码
+    private static String getCode() {
+        //生成一个集合，用于管理字母
+        List<Character> list = new ArrayList<>();
+        //获得26个英文字母
+        for (int i = 0; i < 26; i++) {
+            list.add((char)('a'+i));
+            list.add((char)('A'+i));
+
+        }
+
+        //生成随机数
+        Random r = new Random();
+        //创建容器
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 4; i++) {
+            //随机索引
+            int index = r.nextInt(list.size());
+            char c = list.get(index);
+            sb.append(c);
+        }
+
+        //生成0~9之间的随机数
+        int i = r.nextInt(10);
+
+        sb.append(i);
+
+        char[] arr = sb.toString().toCharArray();
+
+        //随机调换位置
+
+        //随机索引
+        int i1 = r.nextInt(arr.length);
+
+        //最大索引上的字符放在temp中
+        char temp = arr[arr.length-1];
+
+        //随机索引上的字符放到最大索引位置
+        arr[arr.length-1] = arr[i1];
+
+        //temp中的字符放到随机索引的位置
+        arr[i1] = temp;
+
+        return (new String(arr));
+
     }
 
     //2.注册功能

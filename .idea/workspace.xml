@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c06bdd3d-8914-4884-933d-0bb13ab26a22" name="Changes" comment="">
+    <list default="true" id="c06bdd3d-8914-4884-933d-0bb13ab26a22" name="Changes" comment="完成了登入界面注册功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student-system/src/com/itheima/test/sutdent_login.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-system/src/com/itheima/test/sutdent_login.java" afterDir="false" />
     </list>
@@ -43,6 +43,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -57,6 +58,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.sutdent_login">
+    <configuration name="code" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.test.code" />
+      <module name="student-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="com.itheima.login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itheima.login" />
       <module name="student-system" />
@@ -106,6 +120,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.sutdent_login" />
+        <item itemvalue="Application.code" />
         <item itemvalue="Application.com.itheima.test.login" />
         <item itemvalue="Application.com.itheima.login" />
         <item itemvalue="Application.login" />
@@ -151,7 +166,23 @@
       <workItem from="1690806011436" duration="398000" />
       <workItem from="1690806425782" duration="57000" />
       <workItem from="1690806504420" duration="82000" />
-      <workItem from="1690806607052" duration="876000" />
+      <workItem from="1690806607052" duration="1246000" />
+      <workItem from="1690812001599" duration="92000" />
+      <workItem from="1690812138526" duration="70000" />
+      <workItem from="1690852217275" duration="305000" />
+      <workItem from="1690852543940" duration="256000" />
+      <workItem from="1690852818016" duration="32000" />
+      <workItem from="1690852888123" duration="165000" />
+      <workItem from="1690853078557" duration="265000" />
+      <workItem from="1690853426740" duration="600000" />
+      <workItem from="1690854114216" duration="402000" />
+      <workItem from="1690854538424" duration="764000" />
+      <workItem from="1690855380408" duration="294000" />
+      <workItem from="1690855724060" duration="158000" />
+      <workItem from="1690855932663" duration="160000" />
+      <workItem from="1690856121592" duration="254000" />
+      <workItem from="1690856448603" duration="61000" />
+      <workItem from="1690856533190" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="开始构建学生管理系统">
       <created>1690769413078</created>
@@ -286,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690794837518</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="完成了登入界面注册功能">
+      <created>1690807595359</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1690807595359</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +366,8 @@
     <MESSAGE value="生成用户类" />
     <MESSAGE value="完成了用户名格式的校验" />
     <MESSAGE value="校验注册时密码是否输入正确" />
-    <option name="LAST_COMMIT_MESSAGE" value="校验注册时密码是否输入正确" />
+    <MESSAGE value="完成了注册功能" />
+    <MESSAGE value="完成了登入界面注册功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了登入界面注册功能" />
   </component>
 </project>
